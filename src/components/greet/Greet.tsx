@@ -1,3 +1,7 @@
-export default function Greet() {
-  return <div>Hello</div>;
+type GreetProps = {
+  name?: string;
+};
+
+export default function Greet({ name }: GreetProps) {
+  return <div>Hello {name}</div>;
 }
