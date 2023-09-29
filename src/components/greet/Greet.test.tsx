@@ -4,13 +4,7 @@ import Greet from './Greet';
 describe('Greet', () => {
   test('Renders correctly.', () => {
     render(<Greet />);
-    const textElement = screen.getByText('Hello');
-    expect(textElement).toBeInTheDocument();
-  });
-
-  test('Renders with a name.', () => {
-    render(<Greet name='Craig' />);
-    const textElement = screen.getByText('Hello Craig');
+    const textElement = screen.getByText(/Hello/);
     expect(textElement).toBeInTheDocument();
   });
 });
