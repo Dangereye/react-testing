@@ -6,7 +6,11 @@ export default function Application() {
         <input type='text' id='name' />
       </div>
       <div>
-        <label htmlFor='name'>Name</label>
+        <label htmlFor='bio'>Bio</label>
+        <textarea name='bio' id='bio' />
+      </div>
+      <div>
+        <label htmlFor='job-location'>Job location</label>
         <select id='job-location'>
           <option value=''>Select a country</option>
           <option value='US'>United States</option>
