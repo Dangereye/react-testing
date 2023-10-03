@@ -4,6 +4,7 @@ export default function Application() {
       <h1>Job application form</h1>
       <h2>Section one</h2>
       <p>All fields are mandatory.</p>
+      <img src='https://via.placeholder.com/150' alt='A person with a laptop' />
       <form>
         <div>
           <label htmlFor='name'>Name</label>
