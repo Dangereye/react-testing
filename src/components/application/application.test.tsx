@@ -23,6 +23,9 @@ describe('Application', () => {
     const nameElementThree = screen.getByPlaceholderText('Fullname');
     expect(nameElementThree).toBeInTheDocument();
 
+    const nameElementFour = screen.getByDisplayValue('Craig');
+    expect(nameElementFour).toBeInTheDocument();
+
     const bioElement = screen.getByRole('textbox', { name: 'Bio' });
     expect(bioElement).toBeInTheDocument();
 

@@ -7,7 +7,13 @@ export default function Application() {
       <form>
         <div>
           <label htmlFor='name'>Name</label>
-          <input type='text' id='name' placeholder='Fullname' />
+          <input
+            type='text'
+            id='name'
+            placeholder='Fullname'
+            value='Craig'
+            onChange={() => {}}
+          />
         </div>
         <div>
           <label htmlFor='bio'>Bio</label>
