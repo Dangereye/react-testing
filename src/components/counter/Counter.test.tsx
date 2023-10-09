@@ -19,7 +19,7 @@ describe('Counter', () => {
     expect(countElement).toHaveTextContent('0');
   });
 
-  test('Renders a count of 1 after clicking the Increment button.', async () => {
+  test('Renders a count of one after clicking the Increment button.', async () => {
     user.setup();
     render(<Counter />);
 
@@ -30,7 +30,7 @@ describe('Counter', () => {
     expect(countElement).toHaveTextContent('1');
   });
 
-  test('Renders a count of 2 after clicking the Increment button twice', async () => {
+  test('Renders a count of two after clicking the Increment button twice', async () => {
     user.setup();
     render(<Counter />);
 
@@ -39,5 +39,18 @@ describe('Counter', () => {
 
     const countElement = screen.getByRole('heading');
     expect(countElement).toHaveTextContent('2');
+  });
+
+  test('Renders a count of ten after clicking the set button', async () => {
+    user.setup();
+    render(<Counter />);
+    const amountInput = screen.getByRole('spinbutton');
+    await user.type(amountInput, '10');
+    expect(amountInput).toHaveValue(10);
+
+    const setButton = screen.getByRole('button', { name: 'Set' });
+    await user.click(setButton);
+    const countElement = screen.getByRole('heading');
+    expect(countElement).toHaveTextContent('10');
   });
 });
