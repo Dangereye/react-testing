@@ -1,12 +1,12 @@
 import './App.css';
 
 // Components
-import Application from './components/application/Application';
+// import Application from './components/application/Application';
 import Counter from './components/counter/Counter';
-import Skills from './components/skills/Skills';
+// import Skills from './components/skills/Skills';
 
 // Data
-import { skills } from './data/skills';
+// import { skills } from './data/skills';
 
 function App() {
   return (
