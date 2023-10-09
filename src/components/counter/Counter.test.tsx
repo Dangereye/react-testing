@@ -45,12 +45,26 @@ describe('Counter', () => {
     user.setup();
     render(<Counter />);
     const amountInput = screen.getByRole('spinbutton');
-    await user.type(amountInput, '10');
+    await act(() => user.type(amountInput, '10'));
     expect(amountInput).toHaveValue(10);
 
     const setButton = screen.getByRole('button', { name: 'Set' });
-    await user.click(setButton);
+    await act(() => user.click(setButton));
     const countElement = screen.getByRole('heading');
     expect(countElement).toHaveTextContent('10');
+  });
+
+  test('Elements are focused in sequential order', async () => {
+    user.setup();
+    render(<Counter />);
+    const amountInput = screen.getByRole('spinbutton');
+    const setButton = screen.getByRole('button', { name: 'Set' });
+    const incrementButton = screen.getByRole('button', { name: 'Increment' });
+    await act(() => user.tab());
+    expect(incrementButton).toHaveFocus();
+    await act(() => user.tab());
+    expect(amountInput).toHaveFocus();
+    await act(() => user.tab());
+    expect(setButton).toHaveFocus();
   });
 });
