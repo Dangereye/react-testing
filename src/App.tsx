@@ -2,7 +2,7 @@ import './App.css';
 
 // Components
 // import Application from './components/application/Application';
-import Counter from './components/counter/Counter';
+// import Counter from './components/counter/Counter';
 import MuiMode from './components/mui/MuiMode';
 import AppProviders from './components/providers/AppProviders';
 // import Skills from './components/skills/Skills';
