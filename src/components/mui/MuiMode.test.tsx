@@ -1,4 +1,6 @@
 import { render, screen } from '../../TestUtils';
+
+// Components
 import MuiMode from './MuiMode';
 
 describe('MuiMode', () => {
